@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java delights</title>
+    <link rel="stylesheet" href="f3.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    
+
+    <style>
+
+        /* Basic Reset */
+
+
+    </style>
+
+</head>
+
+    <body>
+        <div class="container" data-aos="fade-left">
+        <div class="navbar">
+
+            <a href="#bmiCalculator">BMI Calculator</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+        
+
+            <a href="#contactForm">Contact Us</a>
+
+        </div>
+    </div>
+    <div class="div" data-aos="fade-right" >
+        <h1>Welcome to Java Delights</h1>
+
+    </div>
+
+
+    <!-- BMI Calculator -->
+
+        <div class="nit" data-aos="fade-up">
+        <div id="bmiCalculator" class="section fadeIn">
+
+            <h2>BMI Calculator</h2>
+    
+            <input type="number" id="weight" placeholder="Weight in kg">
+    
+            <input type="number" id="height" placeholder="Height in cm">
+    
+            <button onclick="calculateBMI()">Calculate</button>
+    
+            <p id="bmiResult"></p>
+    
+        </div>
+    </div>
+    <br>
+    <div class="ni" data-aos="fade-right">
+        
+    </div>
+    
+    <div class="ni1" data-aos="fade-left">
+        <h2>Java Delights flavour Partner </h2>
+    </div>
+
+    <!-- Contact Form -->
+        <div id="contactForm" class="section fade-right" data-aos="fade-left">
+
+            <h2>Contact Us</h2>
+
+            <input type="text" id="email" placeholder="Your Email">
+
+            <textarea id="message" placeholder="Your Message"></textarea>
+
+            <button onclick="sendMessage()">Send</button>
+
+        </div>
+
+
+    <script>
+
+        // BMI Calculator
+
+        function calculateBMI() {
+
+            var weight = document.getElementById('weight').value;
+
+            var height = document.getElementById('height').value;
+
+            var bmi = weight / ((height / 100) ** 2);
+
+            document.getElementById('bmiResult').innerText = 'Your BMI is ' + bmi.toFixed(2);
+
+        }
+
+
+        // Simulate Sending Message
+
+        function sendMessage() {
+
+            var email = document.getElementById('email').value;
+
+            var message = document.getElementById('message').value;
+
+            alert('Message sent from: ' + email + "\nMessage: " + message);
+
+        }
+
+    </script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+
+</body>
+
+</html>
